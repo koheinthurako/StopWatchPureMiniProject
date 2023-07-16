@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D3D3D3;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: none;
+    border-radius: 2rem;
+}
+
+.container.loadingAnimation {
+    animation: show_container 0.3s linear forwards;
+}
+
+@keyframes show_container {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(0.5);
+    }
+    40% {
+        transform: scale(1.07);
+    }
+    60% {
+        transform: scale(0.7);
+    }
+    80% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.timeBox {
+    display: flex;
+    font-weight: bold;
+    font-size: 43px;
+    justify-content: center;
+    margin-top: 4rem;
+} 
+
+.timeBox .box {
+    width: 70px;
+    text-align: center;
+}
+
+.timeBox .box.col {
+    width: 12px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.4rem;
+    column-gap: 5rem;
+    
+}
+
+.icons button{
+    cursor: pointer;
+    font-size: 50px;
+    background: none;
+    border: none;
+}
+
+.icons button i{
+    transition: 0.2s;
+}
+
+.icons .active{
+    display: none;
+}
+
+@media screen and (max-width: 536px) {
+    .container {
+        height: 200px;
+        margin: 0 50px;
+    }
+
+    .container .timeBox {
+        font-size: 34px;
+        margin-top: 2.5rem;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .icons {
+        margin-top: 2rem;
+    }
+
+    .icons button {
+        font-size: 36px;
+    }
+}
